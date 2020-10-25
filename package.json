@@ -5,9 +5,9 @@
   "main": "./src/build.js",
   "scripts": {
     "start": "npm run build:rollup && npm run dev:server",
-    "build": "node ./src/cleanPublic.js && npm run build:rollup && npm run build:html",
+    "build": "node ./src/cleanPublic.ts && npm run build:rollup && npm run build:html",
     "build:rollup": "rollup -c",
-    "build:html": "node ./src/build.js",
+    "build:html": "ts-node ./src/build.ts",
     "dev:rollup": "rollup  -c -w --no-watch.clearScreen",
     "dev:server": "nodemon",
     "eslint": "eslint --ext .js .",
@@ -22,6 +22,9 @@
     "@elderjs/elderjs": "^1.0.4",
     "@elderjs/plugin-browser-reload": "^0.1.6",
     "@elderjs/plugin-markdown": "^0.1.6",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "@tsconfig/svelte": "^1.0.10",
+    "@types/node": "^14.14.2",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
@@ -30,6 +33,7 @@
     "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
     "gray-matter": "^4.0.2",
+    "intersection-observer": "^0.11.0",
     "markdown-js": "^0.0.4",
     "polka": "^0.5.2",
     "remark": "^12.0.1",
@@ -37,8 +41,8 @@
     "sirv": "^1.0.5",
     "svelte": "^3.24.0",
     "svelte-preprocess": "^4.0.9",
-    "intersection-observer": "^0.11.0",
-    "systemjs": "^6.5.0"
+    "systemjs": "^6.5.0",
+    "ts-node": "^9.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -53,7 +57,8 @@
     "nodemon": "^2.0.4",
     "prettier": "^2.1.2",
     "prettier-plugin-svelte": "^1.2.1",
-    "rollup": "^2.21.0"
+    "rollup": "^2.21.0",
+    "typescript": "^4.0.3"
   },
   "author": "Nick Reese",
   "license": "MIT",

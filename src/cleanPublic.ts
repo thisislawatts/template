@@ -1,4 +1,4 @@
-const del = require('del');
+import del from 'del';
 const { getConfig } = require('@elderjs/elderjs');
 
 const { distDir } = getConfig();

@@ -1,6 +1,6 @@
 module.exports = {
   origin: '', // TODO: update this.
-  srcDir: 'src',
+  srcDir: 'build',
   distDir: 'public',
   rootDir: process.cwd(),
   build: {},
