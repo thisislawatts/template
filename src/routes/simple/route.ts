@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // the all function returns an array of all of the 'request' objects of a route.
   // In this route, we're only returning one.
   // if all() is ommited, an array of [{slug: 'route-name'}] will be set.

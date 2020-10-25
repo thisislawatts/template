@@ -1,6 +1,6 @@
-const { hookInterface, hookEntityDefinitions } = require('@elderjs/elderjs');
+import { hookInterface, hookEntityDefinitions } from '@elderjs/elderjs';
 
-module.exports = {
+export default {
   all: async () => {
     // This example uses Elder.js source code to show how to dynamically create slugs for a route.
     // There's no special relation to hookInterface. The hookInterface is just a plain array of JS objects and

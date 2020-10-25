@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
-require('dotenv').config();
+import * as dotenv from "dotenv";
+dotenv.config();
+
 const polka = require('polka');
 const cors = require('cors');
 const compression = require('compression');

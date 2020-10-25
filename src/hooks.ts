@@ -1,7 +1,6 @@
-const path = require('path');
-const glob = require('glob');
-const fs = require('fs-extra');
-const os = require('os');
+import * as path from 'path';
+import * as glob from 'glob';
+import * as fs from 'fs-extra';
 
 /**
  * Hooks! 
@@ -107,4 +106,4 @@ const hooks = [
 
   // If you'd like to see specific examples of how to do things that you think could help improve the template please create a GH issue.
 ];
-module.exports = hooks;
+export default hooks;

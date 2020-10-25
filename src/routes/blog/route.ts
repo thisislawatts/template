@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // WARNING: Here be dragons and magic of all sorts.
 
   // 'data' and 'all' for this route are populated by /plugins/elder-plugin/markdown/index.js

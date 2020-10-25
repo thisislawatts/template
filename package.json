@@ -5,11 +5,13 @@
   "main": "./src/build.js",
   "scripts": {
     "start": "npm run build:rollup && npm run dev:server",
-    "build": "node ./src/cleanPublic.ts && npm run build:rollup && npm run build:html",
+    "build": "npm run build:clean && npm run build:rollup && npm run build:html",
+    "build:clean": "ts-node ./src/cleanPublic.ts",
     "build:rollup": "rollup -c",
     "build:html": "ts-node ./src/build.ts",
     "dev:rollup": "rollup  -c -w --no-watch.clearScreen",
     "dev:server": "nodemon",
+    "try-typescript": "npm run build:clean && tsc && ts-node ./src/scripts/move-svelte-to-build-directory.ts && npm run build:rollup && npm run build:html",
     "eslint": "eslint --ext .js .",
     "eslint:fix": "eslint --fix --ext .js .",
     "prettier:svelte": "prettier --write --plugin-search-dir=. ./**/*.svelte"

@@ -7,7 +7,7 @@
  *
  */
 
-module.exports = [
+export default [
   {
     /**
      * This is a simple shortcode that will wrap content with a magical box.
